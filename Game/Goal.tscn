@@ -15,7 +15,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32.5, 39.5 )
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="Goal" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource( 3 )
 __meta__ = {

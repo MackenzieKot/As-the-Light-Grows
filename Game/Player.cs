@@ -4,9 +4,7 @@ using System;
 public class Player : Area2D{
 	[Signal]
 	public delegate void Hit();
-	// Declare member variables here. Examples:
-	// private int a = 2;
-	// private string b = "text";
+
 	[Export]
 	public int Speed = 350; //pixels/sec
 	public Vector2 ScreenSize; //game window size
@@ -14,7 +12,6 @@ public class Player : Area2D{
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready(){
 		ScreenSize = GetViewportRect().Size;
-		//Hide();
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -59,15 +56,14 @@ public class Player : Area2D{
 	}
 	
 	public void OnPlayerBodyEntered(object body){
-		Hide(); // Player disappears after being hit.
+		GD.Print("player collision");
+		Hide();
 		EmitSignal(nameof(Hit));
-		GetNode<CollisionShape2D>("CollisionShape2D").SetDeferred("disabled", true);
 	}
 
 	public void Start(Vector2 pos){
 		Position = pos;
 		Show();
-		GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
 	}
 
 }
