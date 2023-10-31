@@ -28,10 +28,19 @@ public class Lvl1 : Node
 
 	public void NewGame()
 	{
-		GD.Print("start new game");
+		GD.Print("start level 1");
 		var player = GetNode<Player>("Player");
 		var startPosition = GetNode<Position2D>("StartPosition");
 		player.Start(startPosition.Position);
 	}
+	
+	private void FinishLevel()
+	{
+		GD.Print("start next level");
+		GetTree().ChangeScene("res://Lvl2.tscn");
+	}
 
 }
+
+
+

@@ -15,8 +15,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32.5, 39.5 )
 
-[node name="Goal" type="RigidBody2D"]
-gravity_scale = 0.0
+[node name="Goal" type="Area2D"]
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
@@ -29,3 +28,5 @@ frames = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -5.5, -4.5 )
 shape = SubResource( 2 )
+
+[connection signal="area_entered" from="." to="." method="OnGoalAreaEntered"]

@@ -1,8 +1,10 @@
 using Godot;
 using System;
 
-public class Goal : RigidBody2D
+public class Goal : Area2D
 {
+	[Signal]
+	public delegate void GoalHit();
 	// Declare member variables here
 
 	// Called when the node enters the scene tree for the first time.
@@ -17,4 +19,13 @@ public class Goal : RigidBody2D
 //  {
 //      
 //  }
+	
+	private void OnGoalAreaEntered(object area)
+	{
+		GD.Print("goal entered");
+		EmitSignal(nameof(GoalHit));
+	}
 }
+
+
+

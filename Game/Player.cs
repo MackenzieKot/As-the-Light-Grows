@@ -44,6 +44,7 @@ public class Player : Area2D{
 			animatedSprite.Stop();
 		}
 		
+		
 		Position += velocity * delta;
 		Position = new Vector2(x: Mathf.Clamp(Position.x, 0, ScreenSize.x), y: Mathf.Clamp(Position.y, 0, ScreenSize.y));
 	
@@ -60,6 +61,13 @@ public class Player : Area2D{
 		Hide();
 		EmitSignal(nameof(Hit));
 	}
+	
+//	private void OnPlayerAreaEntered(object area)
+//	{
+//		GD.Print("player area");
+//		Hide();
+//		EmitSignal(nameof(Hit));
+//	}
 
 	public void Start(Vector2 pos){
 		Position = pos;
