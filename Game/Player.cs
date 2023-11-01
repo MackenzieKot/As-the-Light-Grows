@@ -33,6 +33,7 @@ public class Player : Area2D{
 		if (Input.IsActionPressed("move_up")){
 			velocity.y -= 1;
 		}
+	
 		
 		var animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
 
@@ -53,21 +54,18 @@ public class Player : Area2D{
 			animatedSprite.FlipV = false;
 			animatedSprite.FlipH = velocity.x < 0;
 		}
-		
 	}
 	
 	public void OnPlayerBodyEntered(object body){
-		GD.Print("player collision");
+		GD.Print("death collision");
 		Hide();
 		EmitSignal(nameof(Hit));
 	}
 	
-//	private void OnPlayerAreaEntered(object area)
-//	{
-//		GD.Print("player area");
-//		Hide();
-//		EmitSignal(nameof(Hit));
-//	}
+	private void OnPlayerAreaEntered(object area)
+	{
+		GD.Print("wall collision");
+	}
 
 	public void Start(Vector2 pos){
 		Position = pos;
@@ -75,3 +73,6 @@ public class Player : Area2D{
 	}
 
 }
+
+
+

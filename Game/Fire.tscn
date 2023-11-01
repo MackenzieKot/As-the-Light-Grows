@@ -15,9 +15,8 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=2]
 radius = 149.03
 
-[node name="Fire" type="RigidBody2D"]
+[node name="Fire" type="StaticBody2D"]
 position = Vector2( 640, 360 )
-gravity_scale = 0.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
@@ -26,9 +25,8 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -1 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
-
-[connection signal="body_entered" from="." to="." method="OnEnemyBodyEntered"]

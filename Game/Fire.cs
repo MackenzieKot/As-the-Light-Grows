@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Fire : RigidBody2D
+public class Fire : StaticBody2D
 {
 	// Declare member variables here. Examples:
 
