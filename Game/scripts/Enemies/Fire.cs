@@ -16,13 +16,6 @@ public class Fire : Area2D
 	
 	private void OnEnemyBodyEntered(object body)
 	{
-		GD.Print("death collision");
 		EmitSignal(nameof(Hit));
 	}
-
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
 }

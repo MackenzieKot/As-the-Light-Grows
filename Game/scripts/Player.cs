@@ -45,7 +45,6 @@ public class Player : KinematicBody2D{
 			animatedSprite.Stop();
 		}
 
-
 		Position += velocity * delta;
 		Position = new Vector2(x: Mathf.Clamp(Position.x, 0, ScreenSize.x*2), y: Mathf.Clamp(Position.y, 0, ScreenSize.y));
 
@@ -57,24 +56,9 @@ public class Player : KinematicBody2D{
 		
 		MoveAndSlide(velocity);
 	}
-	
-//	public void OnPlayerBodyEntered(object body){
-//		GD.Print("death collision");
-//		Hide();
-//		EmitSignal(nameof(Hit));
-//	}
-//
-//	private void OnPlayerAreaEntered(object area)
-//	{
-//		GD.Print("wall collision");
-//	}
 
 	public void Start(Vector2 pos){
 		Position = pos;
 		Show();
 	}
-
 }
-
-
-
