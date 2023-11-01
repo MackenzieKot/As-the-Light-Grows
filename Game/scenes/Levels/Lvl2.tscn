@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/Levels/Lvl2.cs" type="Script" id=1]
 [ext_resource path="res://scenes/Obstacles+Other/Barn.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/Obstacles+Other/Pond.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Enemies/Lamp.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Goal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Obstacles+Other/InvisibleWall.tscn" type="PackedScene" id=8]
 
 [node name="Lvl2" type="Node"]
 script = ExtResource( 1 )
@@ -33,6 +34,10 @@ scale = Vector2( -1, 1 )
 
 [node name="Goal" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2285, 409 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2389, 402 )
+scale = Vector2( 1, 40 )
 
 [connection signal="Hit" from="FarmHouseLit" to="." method="ResetLevel"]
 [connection signal="Hit" from="Lamp" to="." method="ResetLevel"]
