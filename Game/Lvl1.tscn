@@ -19,5 +19,5 @@ position = Vector2( 65, 356 )
 [node name="Goal" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1219, 365 )
 
-[connection signal="Hit" from="Player" to="." method="ResetLevel"]
+[connection signal="Hit" from="Fire" to="." method="ResetLevel"]
 [connection signal="GoalHit" from="Goal" to="." method="FinishLevel"]

@@ -1,12 +1,12 @@
 using Godot;
 using System;
 
-public class Player : Area2D{
+public class Player : KinematicBody2D{
 	[Signal]
 	public delegate void Hit();
 
 	[Export]
-	public int Speed = 350; //pixels/sec
+	public int Speed = 200;
 	public Vector2 ScreenSize; //game window size
 
 	// Called when the node enters the scene tree for the first time.
@@ -14,10 +14,10 @@ public class Player : Area2D{
 		ScreenSize = GetViewportRect().Size;
 	}
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(float delta){
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _PhysicsProcess(float delta){		
 	  	var velocity = Vector2.Zero; //movement vector
-	
+
 		if (Input.IsActionPressed("move_right")){
 			velocity.x += 1;
 		}
@@ -33,8 +33,8 @@ public class Player : Area2D{
 		if (Input.IsActionPressed("move_up")){
 			velocity.y -= 1;
 		}
-	
-		
+
+
 		var animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
 
 		if (velocity.Length() > 0){
@@ -44,28 +44,30 @@ public class Player : Area2D{
 		else{
 			animatedSprite.Stop();
 		}
-		
-		
+
+
 		Position += velocity * delta;
 		Position = new Vector2(x: Mathf.Clamp(Position.x, 0, ScreenSize.x), y: Mathf.Clamp(Position.y, 0, ScreenSize.y));
-	
+
 		if (velocity.x != 0){
 			animatedSprite.Animation = "walk";
 			animatedSprite.FlipV = false;
 			animatedSprite.FlipH = velocity.x < 0;
 		}
+		
+		MoveAndSlide(velocity);
 	}
 	
-	public void OnPlayerBodyEntered(object body){
-		GD.Print("death collision");
-		Hide();
-		EmitSignal(nameof(Hit));
-	}
-	
-	private void OnPlayerAreaEntered(object area)
-	{
-		GD.Print("wall collision");
-	}
+//	public void OnPlayerBodyEntered(object body){
+//		GD.Print("death collision");
+//		Hide();
+//		EmitSignal(nameof(Hit));
+//	}
+//
+//	private void OnPlayerAreaEntered(object area)
+//	{
+//		GD.Print("wall collision");
+//	}
 
 	public void Start(Vector2 pos){
 		Position = pos;

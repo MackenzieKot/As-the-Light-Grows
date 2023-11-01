@@ -22,10 +22,19 @@ public class Goal : Area2D
 	
 	private void OnGoalAreaEntered(object area)
 	{
-		GD.Print("goal entered");
+		GD.Print("goal area entered");
+		EmitSignal(nameof(GoalHit));
+	}
+	
+	private void OnGoalBodyEntered(object body)
+	{
+		GD.Print("goal body entered");
 		EmitSignal(nameof(GoalHit));
 	}
 }
+
+
+
 
 
 
