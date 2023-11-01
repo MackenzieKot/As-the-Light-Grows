@@ -37,7 +37,7 @@ public class Lvl1 : Node
 	private void FinishLevel()
 	{
 		GD.Print("start next level");
-		GetTree().ChangeScene("res://Lvl2.tscn");
+		GetTree().ChangeScene("res://scenes/Levels/Lvl2.tscn");
 	}
 
 }
