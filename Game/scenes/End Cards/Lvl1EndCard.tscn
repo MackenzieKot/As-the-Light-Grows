@@ -1,0 +1,22 @@
+[gd_scene format=2]
+
+[node name="Lvl1EndCard" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 431.0
+margin_top = 360.0
+margin_right = 927.0
+margin_bottom = 415.0
+bbcode_enabled = true
+bbcode_text = "[center]Text explaining the negative effects of light pollution on bugs.
+*
+click to continue[/center]"
+text = "Text explaining the negative effects of light pollution on bugs.
+*
+click to continue"
+fit_content_height = true
+__meta__ = {
+"_edit_group_": true
+}
