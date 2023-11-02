@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Levels/Lvl1.cs" type="Script" id=1]
 [ext_resource path="res://scenes/Goal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Enemies/Fire.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Obstacles+Other/InvisibleWall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://backgrounds/Grass.png" type="Texture" id=6]
 
 [node name="Lvl1" type="Node"]
 script = ExtResource( 1 )
@@ -23,6 +24,15 @@ position = Vector2( 1219, 365 )
 [node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1289, 359 )
 scale = Vector2( 1, 40 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1280, 720 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 6 )
+centered = false
 
 [connection signal="Hit" from="Fire" to="." method="ResetLevel"]
 [connection signal="GoalHit" from="Goal" to="." method="FinishLevel"]
