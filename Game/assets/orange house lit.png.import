@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Farm House.png-536de70cc49b943cef86aaae61315963.stex"
+path="res://.import/orange house lit.png-c9a69da732dba4ac6cdf93016b1e7006.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Farm House.png"
-dest_files=[ "res://.import/Farm House.png-536de70cc49b943cef86aaae61315963.stex" ]
+source_file="res://assets/orange house lit.png"
+dest_files=[ "res://.import/orange house lit.png-c9a69da732dba4ac6cdf93016b1e7006.stex" ]
 
 [params]
 

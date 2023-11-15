@@ -1,9 +1,8 @@
 using Godot;
 using System;
 
-public class Lvl2 : Node
+public class Lvl3 : Node
 {
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		NewGame();
@@ -25,6 +24,6 @@ public class Lvl2 : Node
 	
 	private void FinishLevel()
 	{
-		GetTree().ChangeScene("res://scenes/End Cards/Lvl2EndCard.tscn");
+		GetTree().ChangeScene("res://scenes/End Cards/Lvl3EndCard.tscn");
 	}
 }

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/purple house lit.png" type="Texture" id=1]
+
+[node name="House9" type="StaticBody2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -264, -94, -264, 114, -268, 114, -268, 125, 268, 125, 268, 114, 264, 114, 265, -95, 176, -200, -176, -200 )

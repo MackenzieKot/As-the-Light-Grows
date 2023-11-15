@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/End Card Lvl 1.png" type="Texture" id=1]
-[ext_resource path="res://scripts/End Cards/Lvl1EndCard.cs" type="Script" id=2]
+[ext_resource path="res://assets/End Card Lvl 2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/End Cards/Lvl2EndCard.cs" type="Script" id=2]
 
-[node name="Lvl1EndCard" type="Node2D"]
+[node name="Lvl2EndCard" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -16,10 +16,10 @@ margin_top = 518.0
 margin_right = 892.0
 margin_bottom = 573.0
 bbcode_enabled = true
-bbcode_text = "[center]Light pollution has negative effects on insects. 
+bbcode_text = "[center]Text explaining the negative effects of light pollution on frogs.
 *
 click to continue[/center]"
-text = "Light pollution has negative effects on insects. 
+text = "Text explaining the negative effects of light pollution on frogs.
 *
 click to continue"
 fit_content_height = true

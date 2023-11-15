@@ -25,6 +25,6 @@ public class Lvl1 : Node
 	
 	private void FinishLevel()
 	{
-		GetTree().ChangeScene("res://scenes/Levels/Lvl2.tscn");
+		GetTree().ChangeScene("res://scenes/End Cards/Lvl1EndCard.tscn");
 	}
 }
