@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Enemies/House1Lit.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://scenes/Goal.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/Enemies/Lamp.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/Obstacles+Other/InvisibleWall.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/Enemies/LawnLampLit.tscn" type="PackedScene" id=18]
 
 [node name="Lvl3" type="Node"]
 script = ExtResource( 3 )
@@ -81,18 +82,50 @@ position = Vector2( 4812, 518 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 
+[node name="StaticBody2D" parent="." instance=ExtResource( 17 )]
+position = Vector2( 5218, 579 )
+scale = Vector2( 1, 40 )
+
+[node name="LawnLampLit" parent="." instance=ExtResource( 18 )]
+position = Vector2( 46, 458 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="LawnLampLit5" parent="." instance=ExtResource( 18 )]
+position = Vector2( 3764, 527 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="LawnLampLit6" parent="." instance=ExtResource( 18 )]
+position = Vector2( 3845, 527 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="LawnLampLit7" parent="." instance=ExtResource( 18 )]
+position = Vector2( 3925, 527 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="LawnLampLit8" parent="." instance=ExtResource( 18 )]
+position = Vector2( 4006, 526 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="LawnLampLit4" parent="." instance=ExtResource( 18 )]
+position = Vector2( 275, 457 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="LawnLampLit3" parent="." instance=ExtResource( 18 )]
+position = Vector2( 198, 457 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="LawnLampLit2" parent="." instance=ExtResource( 18 )]
+position = Vector2( 121, 458 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="Lamp" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1808, 716 )
-
-[node name="Lamp3" parent="." instance=ExtResource( 16 )]
-position = Vector2( 2602, 723 )
 
 [node name="Lamp2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 3931, 737 )
 
-[node name="StaticBody2D" parent="." instance=ExtResource( 17 )]
-position = Vector2( 5218, 579 )
-scale = Vector2( 1, 40 )
+[node name="Lamp3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 2602, 723 )
 
 [connection signal="GoalHit" from="Goal" to="." method="FinishLevel"]
 [connection signal="Hit" from="House1Lit" to="." method="ResetLevel"]
@@ -104,6 +137,14 @@ scale = Vector2( 1, 40 )
 [connection signal="Hit" from="House7Lit" to="." method="ResetLevel"]
 [connection signal="Hit" from="House8Lit" to="." method="ResetLevel"]
 [connection signal="Hit" from="House9Lit" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit5" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit6" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit7" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit8" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit4" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit3" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit2" to="." method="ResetLevel"]
 [connection signal="Hit" from="Lamp" to="." method="ResetLevel"]
-[connection signal="Hit" from="Lamp3" to="." method="ResetLevel"]
 [connection signal="Hit" from="Lamp2" to="." method="ResetLevel"]
+[connection signal="Hit" from="Lamp3" to="." method="ResetLevel"]
