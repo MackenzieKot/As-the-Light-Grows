@@ -16,10 +16,12 @@ margin_top = 518.0
 margin_right = 892.0
 margin_bottom = 573.0
 bbcode_enabled = true
-bbcode_text = "[center]Light pollution has negative effects on insects. 
+bbcode_text = "[center]Light pollution has negative effects on insects. Their attraction to light leads to exaustion, an inability to navigate, and makes them an easy target for predators.
+Light also impacts feeding, mating, and development.
 *
 click to continue[/center]"
-text = "Light pollution has negative effects on insects. 
+text = "Light pollution has negative effects on insects. Their attraction to light leads to exaustion, an inability to navigate, and makes them an easy target for predators.
+Light also impacts feeding, mating, and development.
 *
 click to continue"
 fit_content_height = true

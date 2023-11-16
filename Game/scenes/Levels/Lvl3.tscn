@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Enemies/House1Lit.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://scenes/Obstacles+Other/Turtle.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/Goal.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/Enemies/Lamp.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Obstacles+Other/InvisibleWall.tscn" type="PackedScene" id=17]
 
 [node name="Lvl3" type="Node"]
 script = ExtResource( 3 )
@@ -89,6 +90,10 @@ position = Vector2( 2602, 723 )
 [node name="Lamp2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 3931, 737 )
 
+[node name="StaticBody2D" parent="." instance=ExtResource( 17 )]
+position = Vector2( 5218, 579 )
+scale = Vector2( 1, 40 )
+
 [connection signal="GoalHit" from="Goal" to="." method="FinishLevel"]
 [connection signal="Hit" from="House1Lit" to="." method="ResetLevel"]
 [connection signal="Hit" from="House2Lit" to="." method="ResetLevel"]
@@ -99,3 +104,6 @@ position = Vector2( 3931, 737 )
 [connection signal="Hit" from="House7Lit" to="." method="ResetLevel"]
 [connection signal="Hit" from="House8Lit" to="." method="ResetLevel"]
 [connection signal="Hit" from="House9Lit" to="." method="ResetLevel"]
+[connection signal="Hit" from="Lamp" to="." method="ResetLevel"]
+[connection signal="Hit" from="Lamp3" to="." method="ResetLevel"]
+[connection signal="Hit" from="Lamp2" to="." method="ResetLevel"]

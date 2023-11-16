@@ -16,10 +16,10 @@ margin_top = 518.0
 margin_right = 892.0
 margin_bottom = 573.0
 bbcode_enabled = true
-bbcode_text = "[center]Text explaining the negative effects of light pollution on frogs.
+bbcode_text = "[center]Light pollution has negative effects on frogs, varied by species. The lessening of mating calls, the success rate of hatching tadpoles, delayed growth rate and thus delayed reproductive maturity. 
 *
 click to continue[/center]"
-text = "Text explaining the negative effects of light pollution on frogs.
+text = "Light pollution has negative effects on frogs, varied by species. The lessening of mating calls, the success rate of hatching tadpoles, delayed growth rate and thus delayed reproductive maturity. 
 *
 click to continue"
 fit_content_height = true
