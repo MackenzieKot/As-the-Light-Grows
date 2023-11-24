@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/End Card Lvl 3-1.png" type="Texture" id=1]
+[ext_resource path="res://scripts/End Cards/Lvl3EndCard1.cs" type="Script" id=2]
+
+[node name="Lvl3EndCard1" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 396.0
+margin_top = 518.0
+margin_right = 892.0
+margin_bottom = 573.0
+bbcode_enabled = true
+bbcode_text = "[center]Light pollution has negative effects on rabbits.
+*
+click to continue[/center]"
+text = "Light pollution has negative effects on rabbits.
+*
+click to continue"
+fit_content_height = true
+__meta__ = {
+"_edit_group_": true
+}

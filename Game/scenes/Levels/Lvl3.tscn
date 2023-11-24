@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Enemies/House1Lit.tscn" type="PackedScene" id=2]
@@ -18,67 +18,72 @@
 [ext_resource path="res://scenes/Enemies/Lamp.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/Obstacles+Other/InvisibleWall.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/Enemies/LawnLampLit.tscn" type="PackedScene" id=18]
+[ext_resource path="res://backgrounds/full street.png" type="Texture" id=19]
+[ext_resource path="res://backgrounds/Grass.png" type="Texture" id=20]
+[ext_resource path="res://backgrounds/beach and ocean.png" type="Texture" id=21]
+[ext_resource path="res://backgrounds/sidewalk.png" type="Texture" id=22]
+[ext_resource path="res://scenes/Obstacles+Other/Bench.tscn" type="PackedScene" id=23]
 
 [node name="Lvl3" type="Node"]
 script = ExtResource( 3 )
 
 [node name="Goal" parent="." instance=ExtResource( 15 )]
-position = Vector2( 5058, 605 )
+position = Vector2( 5058, 511 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 59, 533 )
+position = Vector2( 59, 455 )
 
 [node name="StartPosition" type="Position2D" parent="."]
-position = Vector2( 59, 533 )
+position = Vector2( 59, 455 )
 
 [node name="House1Lit" parent="." instance=ExtResource( 2 )]
-position = Vector2( 424, 363 )
+position = Vector2( 424, 359 )
 
 [node name="House2Lit" parent="." instance=ExtResource( 5 )]
-position = Vector2( 663, 358 )
+position = Vector2( 663, 349 )
 
 [node name="House3Lit" parent="." instance=ExtResource( 6 )]
-position = Vector2( 896, 360 )
+position = Vector2( 896, 348 )
 
 [node name="House4Lit" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1123, 369 )
+position = Vector2( 1123, 357 )
 
 [node name="House5Lit" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1348, 375 )
+position = Vector2( 1348, 360 )
 
 [node name="House6Lit" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1573, 383 )
+position = Vector2( 1573, 368 )
 
 [node name="House7Lit" parent="." instance=ExtResource( 8 )]
-position = Vector2( 3186, 440 )
+position = Vector2( 3312, 405 )
 
 [node name="House8Lit" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2897, 390 )
+position = Vector2( 3023, 364 )
 
 [node name="House9Lit" parent="." instance=ExtResource( 11 )]
-position = Vector2( 3515, 450 )
+position = Vector2( 3641, 414 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="BrownRabbit" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1903, 444 )
+position = Vector2( 2111, 350 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="GreyRabbit" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2218, 483 )
+position = Vector2( 2469, 169 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Turtle" parent="." instance=ExtResource( 14 )]
-position = Vector2( 4554, 577 )
+position = Vector2( 4554, 483 )
 rotation = -3.14159
 scale = Vector2( 0.7, -0.7 )
 
 [node name="Turtle2" parent="." instance=ExtResource( 14 )]
-position = Vector2( 4536, 785 )
+position = Vector2( 4536, 691 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 
 [node name="Turtle3" parent="." instance=ExtResource( 14 )]
-position = Vector2( 4812, 518 )
+position = Vector2( 4812, 424 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 
@@ -86,46 +91,118 @@ scale = Vector2( 1, -1 )
 position = Vector2( 5218, 579 )
 scale = Vector2( 1, 40 )
 
+[node name="Bench" parent="." instance=ExtResource( 23 )]
+position = Vector2( 1837, 331 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="Bench2" parent="." instance=ExtResource( 23 )]
+position = Vector2( 2750, 343 )
+scale = Vector2( -0.25, 0.25 )
+
+[node name="Bench3" parent="." instance=ExtResource( 23 )]
+position = Vector2( 1710, 102 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bench4" parent="." instance=ExtResource( 23 )]
+position = Vector2( 2853, 96 )
+scale = Vector2( -0.2, 0.2 )
+
 [node name="LawnLampLit" parent="." instance=ExtResource( 18 )]
-position = Vector2( 46, 458 )
+position = Vector2( 46, 380 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="LawnLampLit5" parent="." instance=ExtResource( 18 )]
-position = Vector2( 3764, 527 )
+position = Vector2( 3890, 449 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="LawnLampLit6" parent="." instance=ExtResource( 18 )]
-position = Vector2( 3845, 527 )
+position = Vector2( 3971, 449 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="LawnLampLit7" parent="." instance=ExtResource( 18 )]
-position = Vector2( 3925, 527 )
+position = Vector2( 4051, 449 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="LawnLampLit8" parent="." instance=ExtResource( 18 )]
-position = Vector2( 4006, 526 )
+position = Vector2( 4132, 448 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="LawnLampLit9" parent="." instance=ExtResource( 18 )]
+position = Vector2( 2851, 221 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="LawnLampLit10" parent="." instance=ExtResource( 18 )]
+position = Vector2( 1764, 210 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="LawnLampLit4" parent="." instance=ExtResource( 18 )]
-position = Vector2( 275, 457 )
+position = Vector2( 275, 379 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="LawnLampLit3" parent="." instance=ExtResource( 18 )]
-position = Vector2( 198, 457 )
+position = Vector2( 198, 379 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="LawnLampLit2" parent="." instance=ExtResource( 18 )]
-position = Vector2( 121, 458 )
+position = Vector2( 121, 380 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Lamp" parent="." instance=ExtResource( 16 )]
-position = Vector2( 1808, 716 )
+position = Vector2( 2038, 663 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="Lamp2" parent="." instance=ExtResource( 16 )]
-position = Vector2( 3931, 737 )
+position = Vector2( 4162, 660 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="Lamp3" parent="." instance=ExtResource( 16 )]
-position = Vector2( 2602, 723 )
+position = Vector2( 2611, 663 )
+scale = Vector2( -0.8, 0.8 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="grass" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1280, 720 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/grass"]
+texture = ExtResource( 20 )
+centered = false
+
+[node name="road" type="ParallaxLayer" parent="ParallaxBackground"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/road"]
+position = Vector2( -124, 501 )
+texture = ExtResource( 19 )
+centered = false
+
+[node name="sidewalk" type="ParallaxLayer" parent="ParallaxBackground"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/sidewalk"]
+position = Vector2( 4054, 501 )
+texture = ExtResource( 22 )
+centered = false
+
+[node name="beach and ocean" type="ParallaxLayer" parent="ParallaxBackground"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/beach and ocean"]
+position = Vector2( 4291, -1099 )
+scale = Vector2( 2.25429, 4.77361 )
+texture = ExtResource( 21 )
+centered = false
 
 [connection signal="GoalHit" from="Goal" to="." method="FinishLevel"]
 [connection signal="Hit" from="House1Lit" to="." method="ResetLevel"]
@@ -142,6 +219,8 @@ position = Vector2( 2602, 723 )
 [connection signal="Hit" from="LawnLampLit6" to="." method="ResetLevel"]
 [connection signal="Hit" from="LawnLampLit7" to="." method="ResetLevel"]
 [connection signal="Hit" from="LawnLampLit8" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit9" to="." method="ResetLevel"]
+[connection signal="Hit" from="LawnLampLit10" to="." method="ResetLevel"]
 [connection signal="Hit" from="LawnLampLit4" to="." method="ResetLevel"]
 [connection signal="Hit" from="LawnLampLit3" to="." method="ResetLevel"]
 [connection signal="Hit" from="LawnLampLit2" to="." method="ResetLevel"]
