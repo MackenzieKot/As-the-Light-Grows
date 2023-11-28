@@ -3,19 +3,27 @@ using System;
 
 public class Lvl4 : Node
 {
-	// Declare member variables here. Examples:
-	// private int a = 2;
-	// private string b = "text";
-
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
+		NewGame();
 	}
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+	public void ResetLevel()
+	{
+		var player = GetNode<Player>("Player");
+		player.Hide();
+		NewGame();
+	}
+	
+	public void NewGame()
+	{
+		var player = GetNode<Player>("Player");
+		var startPosition = GetNode<Position2D>("StartPosition");
+		player.Start(startPosition.Position);
+	}
+	
+	private void FinishLevel()
+	{
+		GetTree().ChangeScene("res://scenes/End Cards/Lvl4EndCard1.tscn");
+	}
 }
