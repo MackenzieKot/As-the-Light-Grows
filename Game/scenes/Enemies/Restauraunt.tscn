@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/Enemies/Restauraunt.cs" type="Script" id=1]
+[ext_resource path="res://assets/restauraunt.png" type="Texture" id=2]
+
+[node name="Restauraunt" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -231, -177, -231, -168, -227, -167, -227, -124, -237, -124, -236, 135, 194, 135, 195, -124, 185, -124, 185, -167, 189, -167, 189, -178 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -232, 112, -258, 149, -258, 155, -254, 161, -250, 164, -111, 163, -123, 186, -123, 190, -120, 196, -113, 199, 66, 199, 72, 194, 74, 186, 61, 162, 207, 162, 214, 156, 215, 148, 190, 106 )
+
+[connection signal="body_entered" from="." to="." method="OnEnemyBodyEntered"]

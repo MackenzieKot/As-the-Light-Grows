@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tractor.png-7f4208e0ed0dc3e9a4b710f23185124c.stex"
+path="res://.import/yellowCar.png-bb070ea2eb9c884a8b467676b2ca0f8d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tractor.png"
-dest_files=[ "res://.import/Tractor.png-7f4208e0ed0dc3e9a4b710f23185124c.stex" ]
+source_file="res://assets/yellowCar.png"
+dest_files=[ "res://.import/yellowCar.png-bb070ea2eb9c884a8b467676b2ca0f8d.stex" ]
 
 [params]
 

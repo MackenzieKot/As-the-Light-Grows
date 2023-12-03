@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/bar.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Enemies/Bar.cs" type="Script" id=2]
+
+[node name="Bar" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -140, -173, -140, 82, 142, 83, 141, -174 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -136, 55, -170, 116, -171, 122, -168, 127, -163, 131, 1, 133, -9, 156, -11, 163, -9, 168, -3, 172, 170, 172, 174, 169, 177, 165, 178, 157, 130, 74, 50, 54 )
+
+[connection signal="body_entered" from="." to="." method="OnEnemyBodyEntered"]

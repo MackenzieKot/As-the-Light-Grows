@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Silos.png-c4272955831ec48c9f2b9cea4f7eb017.stex"
+path="res://.import/redCar.png-09bc77fcb56b2d0c6ba5b3bcdac44f95.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Silos.png"
-dest_files=[ "res://.import/Silos.png-c4272955831ec48c9f2b9cea4f7eb017.stex" ]
+source_file="res://assets/redCar.png"
+dest_files=[ "res://.import/redCar.png-09bc77fcb56b2d0c6ba5b3bcdac44f95.stex" ]
 
 [params]
 

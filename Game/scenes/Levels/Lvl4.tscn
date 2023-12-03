@@ -1,33 +1,231 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/Levels/Lvl4.cs" type="Script" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Goal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Enemies/ConvienienceStore.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Enemies/Cafe.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Obstacles+Other/InvisibleWall.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Obstacles+Other/CarYellow.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Enemies/Bakery.tscn" type="PackedScene" id=7]
+[ext_resource path="res://backgrounds/full street.png" type="Texture" id=8]
+[ext_resource path="res://scenes/Obstacles+Other/Buck.tscn" type="PackedScene" id=9]
+[ext_resource path="res://backgrounds/Grass.png" type="Texture" id=10]
+[ext_resource path="res://scenes/Obstacles+Other/Bird.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Obstacles+Other/Fawn.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Enemies/Bookstore.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Enemies/FlowerShop.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/Enemies/ClothingStore.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/Enemies/MovieTheater.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Enemies/Bar.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/Enemies/Restauraunt.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/Enemies/Lamp.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/Obstacles+Other/CafeTable.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/Enemies/CarRed.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/Enemies/CarGreen.tscn" type="PackedScene" id=22]
+[ext_resource path="res://backgrounds/bricks.png" type="Texture" id=23]
 
 [node name="Lvl4" type="Node"]
 script = ExtResource( 1 )
 
-[node name="Goal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 5058, 511 )
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 721.0
+margin_top = -178.0
+margin_right = 1821.0
+margin_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 5, 5 )
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 2
 
-[node name="StaticBody2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( 5204, 500 )
-scale = Vector2( 1, 40 )
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="grass" type="ParallaxLayer" parent="ParallaxBackground"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/grass"]
+position = Vector2( 86, 67 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="grass2" type="ParallaxLayer" parent="ParallaxBackground"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/grass2"]
+position = Vector2( 86, 67 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="road" type="ParallaxLayer" parent="ParallaxBackground"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/road"]
+position = Vector2( 7170, 370 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/road"]
+position = Vector2( 3587, 369 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Goal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6292, 457 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 59, 455 )
+position = Vector2( 56, 408 )
 
 [node name="StartPosition" type="Position2D" parent="."]
-position = Vector2( 59, 455 )
+position = Vector2( 55, 408 )
+
+[node name="Bird" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1400, 416 )
+
+[node name="Bird2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1552, 400 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+
+[node name="Bird3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2032, 470 )
+
+[node name="Bird4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3508, 442 )
+scale = Vector2( -1, 1 )
 
 [node name="ConvienienceStore" parent="." instance=ExtResource( 4 )]
-position = Vector2( 599, 326 )
+position = Vector2( 1130, 241 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="Cafe" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1073, 333 )
+position = Vector2( 2761, 240 )
+scale = Vector2( 1.3, 1.3 )
 
+[node name="CafeTable" parent="." instance=ExtResource( 20 )]
+position = Vector2( 3127, 276 )
+
+[node name="CafeTable2" parent="." instance=ExtResource( 20 )]
+position = Vector2( 3401, 277 )
+
+[node name="CafeTable3" parent="." instance=ExtResource( 20 )]
+position = Vector2( 3153, 72 )
+scale = Vector2( 0.85, 0.85 )
+
+[node name="CafeTable4" parent="." instance=ExtResource( 20 )]
+position = Vector2( 3377, 72 )
+scale = Vector2( 0.85, 0.85 )
+
+[node name="Bakery" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2364, 256 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Buck" parent="." instance=ExtResource( 9 )]
+position = Vector2( 204, 170 )
+scale = Vector2( -0.7, 0.7 )
+
+[node name="Fawn" parent="." instance=ExtResource( 12 )]
+position = Vector2( 363, 257 )
+
+[node name="Bar" parent="." instance=ExtResource( 17 )]
+position = Vector2( 5346, 262 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="Bookstore" parent="." instance=ExtResource( 13 )]
+position = Vector2( 3745, 246 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="ClothingStore" parent="." instance=ExtResource( 15 )]
+position = Vector2( 4254, 201 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="FlowerShop" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1909, 235 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="MovieTheater" parent="." instance=ExtResource( 16 )]
+position = Vector2( 4881, 245 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Restauraunt" parent="." instance=ExtResource( 18 )]
+position = Vector2( 5857, 192 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="Lamp" parent="." instance=ExtResource( 19 )]
+position = Vector2( 888, 524 )
+
+[node name="Lamp2" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1770, 525 )
+
+[node name="Lamp3" parent="." instance=ExtResource( 19 )]
+position = Vector2( 2629, 528 )
+
+[node name="Lamp4" parent="." instance=ExtResource( 19 )]
+position = Vector2( 3369, 526 )
+
+[node name="Lamp5" parent="." instance=ExtResource( 19 )]
+position = Vector2( 4165, 526 )
+
+[node name="CarRed" parent="." instance=ExtResource( 21 )]
+position = Vector2( 2215, 667 )
+
+[node name="CarRedStartPosition" type="Position2D" parent="."]
+position = Vector2( 2215, 667 )
+
+[node name="CarRed2" parent="." instance=ExtResource( 21 )]
+position = Vector2( 6031, 683 )
+endPoint = -1000
+
+[node name="CarRedStartPosition2" type="Position2D" parent="."]
+position = Vector2( 6030, 683 )
+
+[node name="CarGreen" parent="." instance=ExtResource( 22 )]
+position = Vector2( 4054, 709 )
+endPoint = -1500
+
+[node name="CarGreenStartPosition" type="Position2D" parent="."]
+position = Vector2( 4054, 709 )
+
+[node name="CarGreen2" parent="." instance=ExtResource( 22 )]
+position = Vector2( 7533, 689 )
+endPoint = -500
+
+[node name="CarGreenStartPosition2" type="Position2D" parent="."]
+position = Vector2( 7534, 690 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1514, 281 )
+scale = Vector2( 0.5, 0.5 )
+
+[connection signal="GoalHit" from="Goal" to="." method="FinishLevel"]
 [connection signal="Hit" from="ConvienienceStore" to="." method="ResetLevel"]
 [connection signal="Hit" from="Cafe" to="." method="ResetLevel"]
+[connection signal="Hit" from="Bakery" to="." method="ResetLevel"]
+[connection signal="Hit" from="Bar" to="." method="ResetLevel"]
+[connection signal="Hit" from="Bookstore" to="." method="ResetLevel"]
+[connection signal="Hit" from="ClothingStore" to="." method="ResetLevel"]
+[connection signal="Hit" from="FlowerShop" to="." method="ResetLevel"]
+[connection signal="Hit" from="MovieTheater" to="." method="ResetLevel"]
+[connection signal="Hit" from="Restauraunt" to="." method="ResetLevel"]
+[connection signal="Hit" from="Lamp" to="." method="ResetLevel"]
+[connection signal="Hit" from="Lamp2" to="." method="ResetLevel"]
+[connection signal="Hit" from="Lamp3" to="." method="ResetLevel"]
+[connection signal="Hit" from="Lamp4" to="." method="ResetLevel"]
+[connection signal="Hit" from="Lamp5" to="." method="ResetLevel"]
+[connection signal="Hit" from="CarRed" to="." method="ResetLevel"]
+[connection signal="Hit" from="CarRed2" to="." method="ResetLevel"]
+[connection signal="Hit" from="CarGreen" to="." method="ResetLevel"]
+[connection signal="Hit" from="CarGreen2" to="." method="ResetLevel"]
