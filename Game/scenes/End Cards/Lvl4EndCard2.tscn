@@ -16,10 +16,10 @@ margin_top = 518.0
 margin_right = 892.0
 margin_bottom = 573.0
 bbcode_enabled = true
-bbcode_text = "[center]Light pollution has negative effects on birds.
+bbcode_text = "[center]Light pollution has negative effects on birds. Migatory birds migrate at night. Light pollution can have effects on the birds' biological clocks. They may misinterpret the light as a longer period of daylight, and mistime their migration, either too early or too late. This can mean they use up their energy reserves, putting them at risk of predation, exhausion, and collision. It has been observed in some urban birds that they may be evolving to have smaller eyes, which may help them cope with the blinding lights at night.
 *
 click to continue[/center]"
-text = "Light pollution has negative effects on birds.
+text = "Light pollution has negative effects on birds. Migatory birds migrate at night. Light pollution can have effects on the birds' biological clocks. They may misinterpret the light as a longer period of daylight, and mistime their migration, either too early or too late. This can mean they use up their energy reserves, putting them at risk of predation, exhausion, and collision. It has been observed in some urban birds that they may be evolving to have smaller eyes, which may help them cope with the blinding lights at night.
 *
 click to continue"
 fit_content_height = true

@@ -16,10 +16,10 @@ margin_top = 518.0
 margin_right = 892.0
 margin_bottom = 573.0
 bbcode_enabled = true
-bbcode_text = "[center]Light pollution has negative effects on rabbits.
+bbcode_text = "[center]Light pollution has negative effects on rabbits. They will spend less time eating in illuminated areas where they are more visible to predators. They depend on darkness as camoflauge from predators, and not having this darkness can lead to imbalances in the population, which has ripple effects along the food chain.
 *
 click to continue[/center]"
-text = "Light pollution has negative effects on rabbits.
+text = "Light pollution has negative effects on rabbits. They will spend less time eating in illuminated areas where they are more visible to predators. They depend on darkness as camoflauge from predators, and not having this darkness can lead to imbalances in the population, which has ripple effects along the food chain.
 *
 click to continue"
 fit_content_height = true

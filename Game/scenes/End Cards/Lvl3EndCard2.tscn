@@ -16,10 +16,10 @@ margin_top = 518.0
 margin_right = 892.0
 margin_bottom = 573.0
 bbcode_enabled = true
-bbcode_text = "[center]Light pollution has negative effects on sea turtles.
+bbcode_text = "[center]Light pollution has negative effects on sea turtles. Hatchlings follow the brighter horizon towards the sea, illuminated by the moon. When there are lights inland, they become disoriented and crawl the wrong way. Bright lights also deter females from coming ashore to lay eggs at all, and if they do, they too may be disoriented by the lights and crawl inland instead of back to sea.
 *
 click to continue[/center]"
-text = "Light pollution has negative effects on sea turtles.
+text = "Light pollution has negative effects on sea turtles. Hatchlings follow the brighter horizon towards the sea, illuminated by the moon. When there are lights inland, they become disoriented and crawl the wrong way. Bright lights also deter females from coming ashore to lay eggs at all, and if they do, they too may be disoriented by the lights and crawl inland instead of back to sea.
 *
 click to continue"
 fit_content_height = true

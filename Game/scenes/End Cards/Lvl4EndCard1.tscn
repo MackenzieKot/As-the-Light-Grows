@@ -16,10 +16,10 @@ margin_top = 518.0
 margin_right = 892.0
 margin_bottom = 573.0
 bbcode_enabled = true
-bbcode_text = "[center]Light pollution has negative effects on deer.
+bbcode_text = "[center]Light pollution has negative effects on deer. Deer in urban areas have been found to forage more often than their wildland counterparts, who only forage at dawn and dusk. This could lead to more traffic hazards for drivers in urban areas. Deer are also known to freeze in headlights. This is because their eyes have adjusted to the dark, and when sudden light in their eyes blinds them, they will stand still and wait for their eyes to adjust.
 *
 click to continue[/center]"
-text = "Light pollution has negative effects on deer.
+text = "Light pollution has negative effects on deer. Deer in urban areas have been found to forage more often than their wildland counterparts, who only forage at dawn and dusk. This could lead to more traffic hazards for drivers in urban areas. Deer are also known to freeze in headlights. This is because their eyes have adjusted to the dark, and when sudden light in their eyes blinds them, they will stand still and wait for their eyes to adjust.
 *
 click to continue"
 fit_content_height = true
