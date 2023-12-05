@@ -29,9 +29,9 @@ script = ExtResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 721.0
-margin_top = -178.0
+margin_top = -687.0
 margin_right = 1821.0
-margin_bottom = -68.0
+margin_bottom = -475.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 5, 5 )
@@ -47,7 +47,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/grass"]
-position = Vector2( 86, 67 )
+position = Vector2( 86, -97 )
+scale = Vector2( 1, 1.45556 )
 texture = ExtResource( 10 )
 __meta__ = {
 "_edit_group_": true
@@ -59,7 +60,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/grass2"]
-position = Vector2( 86, 67 )
+position = Vector2( 6820, -94 )
+scale = Vector2( 1, 1.39861 )
 texture = ExtResource( 10 )
 __meta__ = {
 "_edit_group_": true
