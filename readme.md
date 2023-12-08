@@ -6,3 +6,4 @@ As the Light Grows
 
 Vlog Links:
 - Vlog 1 - https://www.youtube.com/watch?v=amwFcpjQBUg
+- Commercial - https://www.youtube.com/watch?v=y41b5BVxpBk

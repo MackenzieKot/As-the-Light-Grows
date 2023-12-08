@@ -208,7 +208,7 @@ endPoint = -500
 [node name="CarGreenStartPosition2" type="Position2D" parent="."]
 position = Vector2( 7534, 690 )
 
-[node name="StaticBody2D" parent="." instance=ExtResource( 6 )]
+[node name="CarYellow" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1514, 281 )
 scale = Vector2( 0.5, 0.5 )
 
